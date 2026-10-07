@@ -102,37 +102,49 @@ img {
   align-items: center;
 }
 
+/* --- تنسيق اللوجو المحدث --- */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  text-decoration: none;
 }
 
-.logo-icon {
-  width: 36px;
-  height: 36px;
-  background: #f0eeff;
-  color: var(--primary-color);
-  border-radius: 50%;
+.logo-img {
+  height: 45px;         /* ارتفاع مناسب وشيك للهيدر */
+  width: auto;          /* يحافظ على أبعاد الشعار الأصلية */
+  object-fit: contain;  /* يمنع مط الشعار أو تشوهه */
+  display: block;
+}
+
+.logo-text {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
+  flex-direction: column;
 }
 
 .logo-title {
   font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--primary-color);
+  font-size: 1.1rem;
+  color: #17201c;      /* أو استخدم var(--primary-color) */
   line-height: 1.1;
-  display: block;
 }
 
 .logo-sub {
   font-size: 0.65rem;
-  color: var(--text-muted);
-  display: block;
+  color: #1680bc;      /* درجة الأزرق المستخرجة من اللوجو الجديد */
+  font-weight: 600;
 }
+
+/* ضبط حجم اللوجو على الموبايل لكي لا يزاحم عناصر القائمة */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 38px;
+  }
+  .logo-title {
+    font-size: 0.95rem;
+  }
+}
+
 
 .nav-links {
   display: flex;
