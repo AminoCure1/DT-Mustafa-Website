@@ -93,20 +93,31 @@ img {
 }
 
 /* --- Language Switcher Button --- */
+/* --- تعديل الهيدر لمنع تداخل العناصر --- */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --- تنسيق زر اللغات والمحافظة على المسافة الآمنة --- */
 .lang-switcher {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   background: #f0eeff;
-  padding: 4px;
+  padding: 4px 6px;
   border-radius: 20px;
+  margin-inline-start: auto;
+  margin-inline-end: 15px;   /* مسافة تفصل بينه وبين القائمة */
 }
 
 .lang-btn {
   background: transparent;
   border: none;
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: 15px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
   color: var(--text-dark);
@@ -117,6 +128,20 @@ img {
   background: var(--primary-color);
   color: var(--white);
 }
+
+/* --- مسافات خاصة للشاشات الصغيرة والموبايل --- */
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-inline-end: 20px; /* توسيع المسافة عن زر القائمة (البرجر) */
+    padding: 3px 5px;
+  }
+  
+  .lang-btn {
+    padding: 3px 7px;
+    font-size: 0.7rem;
+  }
+}
+
 
 /* --- Logo & Navbar --- */
 .navbar {
