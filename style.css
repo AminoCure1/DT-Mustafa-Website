@@ -7,7 +7,8 @@
   --text-muted: #68736e;
   --bg-light: #f5f8f6;
   --white: #ffffff;
-  --font-main: 'Poppins', sans-serif;
+  --font-en: 'Poppins', sans-serif;
+  --font-ar: 'Tajawal', sans-serif;
   --font-signature: 'Allura', cursive;
 }
 
@@ -22,11 +23,16 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: var(--font-en);
   color: var(--text-dark);
   background-color: var(--bg-light);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* تنسيق اللغة العربية تلقائياً */
+[dir="rtl"] body {
+  font-family: var(--font-ar);
 }
 
 .container {
@@ -84,6 +90,32 @@ img {
 
 .btn-block {
   width: 100%;
+}
+
+/* --- Language Switcher Button --- */
+.lang-switcher {
+  display: flex;
+  gap: 5px;
+  background: #f0eeff;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
 }
 
 /* --- Logo & Navbar --- */
@@ -216,6 +248,10 @@ img {
 .hero-image-wrapper {
   display: flex;
   justify-content: flex-end;
+}
+
+[dir="rtl"] .hero-image-wrapper {
+  justify-content: flex-start;
 }
 
 .hero-img-box {
@@ -351,6 +387,10 @@ img {
 .arrow-btn:hover {
   background: var(--primary-color);
   color: var(--white);
+}
+
+[dir="rtl"] .arrow-btn i {
+  transform: rotate(180deg);
 }
 
 .tags { display: flex; gap: 5px; margin-top: 6px; flex-wrap: wrap; }
