@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,7 +19,7 @@
   <!-- ==================== Header / Navbar ==================== -->
   <header class="navbar">
     <div class="container nav-container">
-      <!-- اللوجو -->
+      <!-- Logo -->
       <a href="#home" class="logo">
         <img src="logo.png" alt="Vision Dental Academy" class="logo-img">
         <div class="logo-text">
@@ -27,7 +27,14 @@
           <span class="logo-sub">Vision Dental Academy</span>
         </div>
       </a>
-      
+
+      <!-- Language Selector -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="changeLanguage('ar')">عربي</button>
+        <button class="lang-btn" onclick="changeLanguage('fr')">FR</button>
+      </div>
+
       <!-- CSS Mobile Menu Trigger -->
       <input type="checkbox" id="nav-check" hidden>
       <label for="nav-check" class="nav-toggler">
@@ -36,17 +43,17 @@
       </label>
 
       <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-primary nav-btn-mobile">Contact Me</a>
+        <a href="#home" class="active" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Why Us</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <a href="#contact" class="btn btn-primary nav-btn-mobile" data-i18n="btn_contact">Contact Me</a>
       </nav>
       
       <div class="nav-right">
-        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Contact Me</a>
       </div>
     </div>
   </header>
@@ -56,15 +63,15 @@
     <section id="home" class="hero">
       <div class="container hero-container">
         <div class="hero-content">
-          <p class="hero-subtitle">DIGITAL DENTAL DESIGNER</p>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">DIGITAL DENTAL DESIGNER</p>
           <h1 class="hero-title">DT. Mustafa</h1>
-          <h2 class="hero-tagline">Turning Smiles into Digital Reality</h2>
-          <p class="hero-desc">
+          <h2 class="hero-tagline" data-i18n="hero_tagline">Turning Smiles into Digital Reality</h2>
+          <p class="hero-desc" data-i18n="hero_desc">
             I create accurate and aesthetic digital smile designs using Exocad and modern digital dentistry tools.
           </p>
           <div class="hero-btns">
-            <a href="#portfolio" class="btn btn-primary">View My Work &rarr;</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#portfolio" class="btn btn-primary" data-i18n="btn_view_work">View My Work &rarr;</a>
+            <a href="#contact" class="btn btn-outline" data-i18n="btn_contact">Contact Me</a>
           </div>
         </div>
 
@@ -84,21 +91,21 @@
             <div class="stat-icon"><i class="fa-regular fa-user"></i></div>
             <div class="stat-info">
               <h3>2000+</h3>
-              <p>Cases Completed</p>
+              <p data-i18n="stat_cases">Cases Completed</p>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-tooth"></i></div>
             <div class="stat-info">
               <h3>Exocad</h3>
-              <p>Certified</p>
+              <p data-i18n="stat_certified">Certified</p>
             </div>
           </div>
           <div class="stat-card">
             <div class="stat-icon"><i class="fa-solid fa-lightbulb"></i></div>
             <div class="stat-info">
-              <h3>Digital Dentistry</h3>
-              <p>Passionate</p>
+              <h3 data-i18n="stat_digital_title">Digital Dentistry</h3>
+              <p data-i18n="stat_passionate">Passionate</p>
             </div>
           </div>
         </div>
@@ -109,8 +116,8 @@
     <section class="featured-work">
       <div class="container">
         <div class="section-header">
-          <h2>Featured Work</h2>
-          <p>Real cases. Real results.</p>
+          <h2 data-i18n="featured_title">Featured Work</h2>
+          <p data-i18n="featured_sub">Real cases. Real results.</p>
         </div>
         <div class="portfolio-grid">
           <div class="card">
@@ -118,7 +125,7 @@
               <img src="images/case1.jpg" alt="Full Mouth Rehabilitation" onerror="this.src='https://via.placeholder.com/400x250?text=Case+1'">
             </div>
             <div class="card-body">
-              <h3>Full Mouth Rehabilitation</h3>
+              <h3 data-i18n="case_full_mouth">Full Mouth Rehabilitation</h3>
               <a href="#portfolio" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
@@ -128,7 +135,7 @@
               <img src="images/case2.jpg" alt="Smile Design" onerror="this.src='https://via.placeholder.com/400x250?text=Case+2'">
             </div>
             <div class="card-body">
-              <h3>Smile Design</h3>
+              <h3 data-i18n="case_smile_design">Smile Design</h3>
               <a href="#portfolio" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
@@ -138,43 +145,43 @@
               <img src="images/case3.jpg" alt="Veneers" onerror="this.src='https://via.placeholder.com/400x250?text=Case+3'">
             </div>
             <div class="card-body">
-              <h3>Veneers</h3>
+              <h3 data-i18n="case_veneers">Veneers</h3>
               <a href="#portfolio" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         <div class="center-btn">
-          <a href="#portfolio" class="btn btn-primary">View All Cases &rarr;</a>
+          <a href="#portfolio" class="btn btn-primary" data-i18n="btn_all_cases">View All Cases &rarr;</a>
         </div>
       </div>
     </section>
 
     <!-- Why Work With Me -->
-    <section class="why-us">
+    <section id="skills" class="why-us">
       <div class="container">
         <div class="section-header">
-          <h2>Why Work With Me?</h2>
+          <h2 data-i18n="why_title">Why Work With Me?</h2>
         </div>
         <div class="features-grid">
           <div class="feature-card">
             <i class="fa-solid fa-bullseye feature-icon"></i>
-            <h3>Accuracy</h3>
-            <p>Precision in every detail with digital workflow.</p>
+            <h3 data-i18n="why_acc_title">Accuracy</h3>
+            <p data-i18n="why_acc_desc">Precision in every detail with digital workflow.</p>
           </div>
           <div class="feature-card">
             <i class="fa-solid fa-wand-magic-sparkles feature-icon"></i>
-            <h3>Aesthetic Results</h3>
-            <p>Natural and functional smile designs.</p>
+            <h3 data-i18n="why_aes_title">Aesthetic Results</h3>
+            <p data-i18n="why_aes_desc">Natural and functional smile designs.</p>
           </div>
           <div class="feature-card">
             <i class="fa-solid fa-desktop feature-icon"></i>
-            <h3>Modern Tools</h3>
-            <p>Exocad & advanced digital technology.</p>
+            <h3 data-i18n="why_tool_title">Modern Tools</h3>
+            <p data-i18n="why_tool_desc">Exocad & advanced digital technology.</p>
           </div>
           <div class="feature-card">
             <i class="fa-regular fa-clock feature-icon"></i>
-            <h3>On-Time Delivery</h3>
-            <p>Committed to quality and deadlines.</p>
+            <h3 data-i18n="why_time_title">On-Time Delivery</h3>
+            <p data-i18n="why_time_desc">Committed to quality and deadlines.</p>
           </div>
         </div>
       </div>
@@ -184,8 +191,8 @@
     <section id="about" class="page-section">
       <div class="container">
         <div class="page-header-banner">
-          <h2>About Me</h2>
-          <p>Get to know me better</p>
+          <h2 data-i18n="about_title">About Me</h2>
+          <p data-i18n="about_sub">Get to know me better</p>
         </div>
 
         <div class="about-content">
@@ -194,11 +201,11 @@
           </div>
           <div class="about-text-box">
             <h3>DT. Mustafa</h3>
-            <p class="subtitle">Digital Dental Designer | Trainer</p>
-            <p class="desc">
+            <p class="subtitle" data-i18n="about_role">Digital Dental Designer | Trainer</p>
+            <p class="desc" data-i18n="about_p1">
               I am a digital dental designer with a strong passion for creating functional and aesthetic smiles using digital technologies. I specialize in Exocad and modern digital dentistry solutions, with a focus on accuracy, detail and patient satisfaction.
             </p>
-            <p class="desc">
+            <p class="desc" data-i18n="about_p2">
               I have completed 2000+ cases and continue to improve my skills through continuous learning and hands-on experience.
             </p>
           </div>
@@ -208,27 +215,27 @@
           <div class="about-stat-card">
             <i class="fa-solid fa-tooth"></i>
             <h4>2000+</h4>
-            <p>Cases Completed</p>
+            <p data-i18n="stat_cases">Cases Completed</p>
           </div>
           <div class="about-stat-card">
             <i class="fa-solid fa-award"></i>
             <h4>Exocad</h4>
-            <p>Certified</p>
+            <p data-i18n="stat_certified">Certified</p>
           </div>
           <div class="about-stat-card">
             <i class="fa-solid fa-microscope"></i>
-            <h4>Digital Dentistry</h4>
-            <p>Passionate</p>
+            <h4 data-i18n="stat_digital_title">Digital Dentistry</h4>
+            <p data-i18n="stat_passionate">Passionate</p>
           </div>
           <div class="about-stat-card">
             <i class="fa-solid fa-graduation-cap"></i>
-            <h4>Training</h4>
-            <p>& Education</p>
+            <h4 data-i18n="about_training">Training</h4>
+            <p data-i18n="about_edu">& Education</p>
           </div>
         </div>
 
         <div class="quote-box">
-          <p class="quote">"Good design is not just about how it looks, but how it functions and makes a difference."</p>
+          <p class="quote" data-i18n="quote_text">"Good design is not just about how it looks, but how it functions and makes a difference."</p>
           <span class="signature">DT. Mustafa</span>
         </div>
       </div>
@@ -238,16 +245,16 @@
     <section id="portfolio" class="page-section">
       <div class="container">
         <div class="page-header-banner">
-          <h2>My Portfolio</h2>
-          <p>Selected cases from my digital dentistry work.</p>
+          <h2 data-i18n="portfolio_title">My Portfolio</h2>
+          <p data-i18n="portfolio_sub">Selected cases from my digital dentistry work.</p>
         </div>
 
         <div class="portfolio-filters">
-          <button class="filter-btn active">All</button>
-          <button class="filter-btn">Before / After</button>
-          <button class="filter-btn">Smile Design</button>
-          <button class="filter-btn">Veneers</button>
-          <button class="filter-btn">Wax-up</button>
+          <button class="filter-btn active" data-i18n="filter_all">All</button>
+          <button class="filter-btn" data-i18n="filter_ba">Before / After</button>
+          <button class="filter-btn" data-i18n="filter_sd">Smile Design</button>
+          <button class="filter-btn" data-i18n="filter_ven">Veneers</button>
+          <button class="filter-btn" data-i18n="filter_wax">Wax-up</button>
           <button class="filter-btn">Exocad</button>
         </div>
 
@@ -258,7 +265,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Full Mouth Rehabilitation</h3>
+                <h3 data-i18n="case_full_mouth">Full Mouth Rehabilitation</h3>
                 <div class="tags"><span class="tag">Exocad</span><span class="tag">Digital Design</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -271,7 +278,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Smile Design</h3>
+                <h3 data-i18n="case_smile_design">Smile Design</h3>
                 <div class="tags"><span class="tag">Digital Design</span><span class="tag">Aesthetic</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -284,7 +291,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Veneers</h3>
+                <h3 data-i18n="case_veneers">Veneers</h3>
                 <div class="tags"><span class="tag">Exocad</span><span class="tag">Aesthetic</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -297,7 +304,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Wax-up</h3>
+                <h3 data-i18n="case_waxup">Wax-up</h3>
                 <div class="tags"><span class="tag">Exocad</span><span class="tag">Planning</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -310,7 +317,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Implant Design</h3>
+                <h3 data-i18n="case_implant">Implant Design</h3>
                 <div class="tags"><span class="tag">Exocad</span><span class="tag">Surgical Guide</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -323,7 +330,7 @@
             </div>
             <div class="card-body">
               <div>
-                <h3>Anterior Restoration</h3>
+                <h3 data-i18n="case_anterior">Anterior Restoration</h3>
                 <div class="tags"><span class="tag">Digital Design</span><span class="tag">Aesthetic</span></div>
               </div>
               <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
@@ -332,7 +339,7 @@
         </div>
 
         <div class="center-btn">
-          <a href="#" class="btn btn-primary">View More Cases &rarr;</a>
+          <a href="#" class="btn btn-primary" data-i18n="btn_more_cases">View More Cases &rarr;</a>
         </div>
       </div>
     </section>
@@ -341,45 +348,45 @@
     <section id="services" class="page-section">
       <div class="container">
         <div class="page-header-banner">
-          <h2>My Services</h2>
-          <p>Digital solutions for better smiles.</p>
+          <h2 data-i18n="services_title">My Services</h2>
+          <p data-i18n="services_sub">Digital solutions for better smiles.</p>
         </div>
 
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
-            <h3>Smile Design</h3>
-            <p>Digital smile design for natural and aesthetic results.</p>
+            <h3 data-i18n="case_smile_design">Smile Design</h3>
+            <p data-i18n="srv_smile_desc">Digital smile design for natural and aesthetic results.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-desktop"></i></div>
-            <h3>Exocad Design</h3>
-            <p>Full digital workflow using Exocad software.</p>
+            <h3 data-i18n="srv_exocad_title">Exocad Design</h3>
+            <p data-i18n="srv_exocad_desc">Full digital workflow using Exocad software.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
-            <h3>Wax-up</h3>
-            <p>Functional and aesthetic wax-up design.</p>
+            <h3 data-i18n="case_waxup">Wax-up</h3>
+            <p data-i18n="srv_wax_desc">Functional and aesthetic wax-up design.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
-            <h3>Veneers Design</h3>
-            <p>Custom veneers for perfect smiles.</p>
+            <h3 data-i18n="srv_ven_title">Veneers Design</h3>
+            <p data-i18n="srv_ven_desc">Custom veneers for perfect smiles.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-sitemap"></i></div>
-            <h3>Implant Design</h3>
-            <p>Implant planning and digital guides.</p>
+            <h3 data-i18n="case_implant">Implant Design</h3>
+            <p data-i18n="srv_imp_desc">Implant planning and digital guides.</p>
           </div>
 
           <div class="service-card">
             <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-            <h3>Full Arch</h3>
-            <p>Digital design for full arch rehabilitation.</p>
+            <h3 data-i18n="srv_arch_title">Full Arch</h3>
+            <p data-i18n="srv_arch_desc">Digital design for full arch rehabilitation.</p>
           </div>
         </div>
       </div>
@@ -389,8 +396,8 @@
     <section id="contact" class="page-section">
       <div class="container">
         <div class="page-header-banner">
-          <h2>Get In Touch</h2>
-          <p>Let's create something great together.</p>
+          <h2 data-i18n="contact_title">Get In Touch</h2>
+          <p data-i18n="contact_sub">Let's create something great together.</p>
         </div>
 
         <div class="contact-wrapper">
@@ -400,7 +407,7 @@
               <div>
                 <h4>WhatsApp</h4>
                 <p>+20 11 49726824</p>
-                <a href="https://wa.me/201149726824" target="_blank">Chat with me</a>
+                <a href="https://wa.me/201149726824" target="_blank" data-i18n="chat_me">Chat with me</a>
               </div>
             </div>
 
@@ -409,14 +416,14 @@
               <div>
                 <h4>Email</h4>
                 <p>Mostafaeisacadcam@gmail.com</p>
-                <a href="mailto:Mostafaeisacadcam@gmail.com">Send Email</a>
+                <a href="mailto:Mostafaeisacadcam@gmail.com" data-i18n="send_email">Send Email</a>
               </div>
             </div>
 
             <div class="contact-item">
               <div class="c-icon"><i class="fa-solid fa-share-nodes"></i></div>
               <div>
-                <h4>Social Media</h4>
+                <h4 data-i18n="social_media">Social Media</h4>
                 <div class="contact-socials">
                   <a href="https://www.tiktok.com/@visiondentalacademy?_r=1&_t=ZS-9APf1ApeHDx" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                   <a href="https://www.instagram.com/academyvisiondental?rpxt=MWtsdGpkeGw2OWI3cA==" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -429,19 +436,19 @@
           <form class="contact-form" onsubmit="event.preventDefault();">
             <div class="form-group-row">
               <div class="form-group">
-                <label>Your Name</label>
+                <label data-i18n="form_name">Your Name</label>
                 <input type="text" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <label>Email Address</label>
+                <label data-i18n="form_email">Email Address</label>
                 <input type="email" placeholder="Your Email" required>
               </div>
             </div>
             <div class="form-group">
-              <label>Message</label>
+              <label data-i18n="form_msg">Message</label>
               <textarea rows="5" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form_send">Send Message &rarr;</button>
           </form>
         </div>
       </div>
@@ -470,16 +477,18 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Why Us</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </div>
       <p class="copyright">&copy; 2026 DT. Mustafa. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- JS Switcher Script -->
+  <script src="script.js"></script>
 </body>
 </html>
